@@ -1,0 +1,368 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #1ebfc1;
+  --font-heading: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Common */
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+
+  min-width: 108px;
+  padding: 20px 41px;
+  line-height: 50px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.6rem;
+  border-radius: 14px;
+  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.05);
+
+  color: #fff;
+  background: #1ebfc1;
+}
+
+.heading {
+  font-weight: 700;
+  color: #0d1111;
+}
+
+.heading.lv1 {
+  font-size: 6.2rem;
+  line-height: 1.17;
+  font-weight: 700;
+}
+
+.heading.lv2 {
+  font-size: 4.2rem;
+  font-weight: 300;
+  line-height: 1.33;
+}
+
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 24px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+.line-clamp.line-3 {
+  --line-clamp: 3;
+}
+
+.break-all {
+  word-break: break-word;
+}
+
+/* Header */
+.header {
+  background: #fff;
+}
+
+.header.fixed {
+  position: sticky;
+  top: -44px;
+  z-index: 1;
+}
+
+.header .body {
+  display: flex;
+  padding: 52px 0 8px;
+  align-items: center;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav li a {
+  display: inline-block;
+  padding: 8px 21px;
+  font-size: 1.6rem;
+  color: #2f3a3b;
+  font-weight: 400;
+}
+
+.nav ul a:hover,
+.nav li.active a {
+  /* text-shadow: 1px 0 0 currentColor; */
+  color: #2f3a3b;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.nav a::before {
+  display: block;
+  content: attr(title);
+  font-weight: 600;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* Action */
+.action {
+  margin-left: 15%;
+}
+
+.action .sign-in-link {
+  display: inline-block;
+  color: #494949;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.action .sign-in-link::before {
+  display: block;
+  content: attr(title);
+  font-weight: 600;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.action .sign-in-link:hover {
+  font-weight: 600;
+}
+
+.action .sign-up-btn {
+  margin-left: 24px;
+  padding: 12px 24px;
+  color: var(--primary-color);
+  background: #fff;
+  font-size: 1.6rem;
+  min-width: 108px;
+  border-radius: 6px;
+  border: 1px solid var(--primary-color);
+}
+
+.action .sign-up-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* Hero */
+.hero {
+  margin: 50px 0 79px;
+}
+
+.hero .body {
+  display: flex;
+}
+
+.hero .content-block {
+  width: 39%;
+}
+
+.hero .content-block .hero-title {
+  color: #767e7e;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.hero .desc {
+  margin: 46px 84px 0 0;
+  color: #9da6a5;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.78;
+}
+
+.hero .cta-group {
+  display: flex;
+  align-items: center;
+  margin-top: 52px;
+}
+
+.hero .play-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  color: var(--primary-color);
+  margin-left: 50px;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  transition: ease 0.4s;
+}
+
+.hero .play-btn:hover {
+  color: #fff;
+  background: var(--primary-color);
+  box-shadow: 0px 22px 50px 0px rgba(0, 0, 0, 0.05);
+}
+
+.hero .media-block {
+  position: relative;
+  width: 55%;
+  margin-left: auto;
+}
+
+.hero .media-block .img {
+  display: block;
+  margin-left: auto;
+  width: 576px;
+  height: 631px;
+  object-fit: cover;
+}
+
+.hero .item {
+  box-shadow: 0px 10px 80px 0px rgba(0, 0, 0, 0.05);
+}
+
+/* Courses */
+
+.hero .item.item-courses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fefefd;
+  border-radius: 18px;
+  position: absolute;
+  top: 149px;
+  left: 25px;
+  width: 157px;
+  height: 75px;
+}
+
+.hero .media-block .body {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .item.item-courses img {
+  margin-right: 16px;
+}
+
+.hero .title {
+  color: #0d1111;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hero .item-courses .title::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  top: 28px;
+  left: 4px;
+  width: 28px;
+  height: 4px;
+  background: #fff;
+}
+
+.hero .title span {
+  display: block;
+}
+
+/* Schedules */
+.hero .item.item-schedules {
+    position: absolute;
+    left:0;
+    bottom:46px;
+    padding: 16px 25px 23px ;
+    display: inline-block;
+    border-radius: 24px;
+    background: #fff;
+    width: 124px;
+    height: 132px;
+}
+
+.hero .item-schedules .title {
+    text-align: center;
+}
+
+.hero .item-schedules img {
+    display: block;
+}
+
+.hero .item-schedules img:first-of-type,
+.hero .item-schedules img:last-of-type {
+    margin-top: 16px;
+}
+
+.hero .item-schedules img:nth-of-type(2) {
+    margin: 12px 0 10px;
+}
+
+.hero .item-schedules img:last-of-type {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Avatar */
+
+.hero .item.item-avatar {
+    position: absolute;
+    padding:  17px 35px;
+    right: 45px;
+    bottom: 41px;
+    border-radius: 24px;
+    background: #fefefd;
+    width: 207px;
+    height: 90px;
+}
+
+.hero .item-avatar .avatar {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: -7px;
+}
+
+.hero .item-avatar .avatar:first-child {
+    margin-left: 0;
+}
+.hero .item-avatar .title {
+    text-align: center;
+    color: #0d1111;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+
+}
